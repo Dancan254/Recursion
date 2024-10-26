@@ -5,7 +5,6 @@ public class BinarySearch {
     Time Complexities
     Normal Binary Search (Iterative): (O(\log n))
     Binary Search with Recursion: (O(\log n))
-    Binary Search with Memoization: (O(\log n)) (with additional space complexity for storing memoized results)
      */
     public static void main(String[] args) {
         System.out.println("Bin search without recursion!");
