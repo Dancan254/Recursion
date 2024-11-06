@@ -1,4 +1,4 @@
-package patterns.bubblesort;
+package bubblesort;
 public class BubbleSort {
     public static void main(String[] args) {
         int[] arr = {99, 100, 67, 78, 89, 90, 76};
