@@ -2,8 +2,14 @@ package bubblesort;
 public class BubbleSort {
     public static void main(String[] args) {
         int[] arr = {99, 100, 67, 78, 89, 90, 76};
-        bubbleSortWithRecursion(arr, 0, 0);
+        bubbleSortWithRecursion(arr, arr.length);
         for (int num : arr) {
+            System.out.println(num);
+        }
+        System.out.println("Bubble sort without recursion");
+        int[] arr2 = {99, 100, 67, 78, 89, 90, 76};
+        bubbleSortWithoutRecursion(arr2);
+        for (int num : arr2) {
             System.out.println(num);
         }
     }
@@ -13,26 +19,24 @@ public class BubbleSort {
             for(int j = 0; j < arr.length - i -1; j++){
                 if(arr[j] > arr[j+1]){
                     int temp = arr[j];
-                    arr[j+1] = arr[j];
-                    arr[j] = temp;
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
                 }  
             }   
         }
     }
 
-    public static void bubbleSortWithRecursion(int[] arr, int i, int j) {
-        if (i == arr.length - 1) {
+    public static void bubbleSortWithRecursion(int[] arr, int length) {
+        if(length == 1){
             return;
         }
-        if (j == arr.length - 1 - i) {
-            bubbleSortWithRecursion(arr, i + 1, 0);
-            return;
+        for(int i = 0; i < length - 1; i++){
+            if(arr[i] > arr[i+1]){
+                int temp = arr[i];
+                arr[i] = arr[i+1];
+                arr[i+1] = temp;
+            }
         }
-        if (arr[j] > arr[j + 1]) {
-            int temp = arr[j];
-            arr[j] = arr[j + 1];
-            arr[j + 1] = temp;
-        }
-        bubbleSortWithRecursion(arr, i, j + 1);
+        bubbleSortWithRecursion(arr, length - 1);
     }
 }
