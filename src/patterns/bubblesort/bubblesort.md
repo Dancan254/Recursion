@@ -3,6 +3,7 @@
 Bubble Sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The process continues until the entire list is sorted.
 
 ## Table of Contents
+
 - [Bubble Sort](#bubble-sort)
   - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
@@ -26,6 +27,7 @@ Bubble Sort is a simple sorting algorithm that repeatedly steps through the list
 **Bubble Sort** repeatedly traverses a list, comparing each pair of adjacent elements and swapping them if they are out of order. This method is called "bubble" sort because with each pass, the largest element "bubbles up" to its correct position at the end of the list, similar to how bubbles rise to the surface.
 
 **Characteristics**:
+
 - **Type**: Comparison-based sorting algorithm
 - **Best for**: Small datasets or nearly sorted data
 - **In-place**: Yes
@@ -56,6 +58,7 @@ function bubbleSort(array):
 ```
 
 ### Explanation
+
 - **Outer loop** (`i`): Runs `n - 1` times, as `n - 1` passes are enough to sort the array.
 - **Inner loop** (`j`): Compares elements up to the unsorted part of the array (`n - i - 1`) and performs swaps.
 
@@ -92,6 +95,7 @@ public class BubbleSort {
 ```
 
 ### Explanation
+
 - The **outer loop** (`i`) reduces the number of elements that need to be checked with each pass.
 - The **inner loop** (`j`) compares adjacent elements and swaps them if they are in the wrong order.
 
@@ -113,9 +117,11 @@ Bubble Sort has the following time complexities:
 ## Optimization
 
 ### Early Exit
+
 In the best case (when the array is already sorted), Bubble Sort will still perform all passes by default. We can optimize the algorithm by introducing a **swap flag**. If no swaps occur during a pass, the algorithm can terminate early.
 
 **Optimized Code in Java**:
+
 ```java
 public static void bubbleSortOptimized(int[] array) {
     int n = array.length;
@@ -166,10 +172,12 @@ Consider sorting the array `[5, 1, 4, 2, 8]`:
 ## Applications and Limitations
 
 ### Applications
+
 - Bubble Sort can be useful for **educational purposes** to demonstrate simple sorting mechanisms.
 - It works well on **small or nearly sorted datasets** due to its simplicity.
 
 ### Limitations
+
 - Bubble Sort is inefficient for large datasets due to its \( O(n^2) \) time complexity.
 - Other sorting algorithms like **Merge Sort** and **Quick Sort** are preferable for larger datasets due to their better average and worst-case performance.
 
