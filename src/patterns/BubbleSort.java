@@ -1,7 +1,7 @@
 public class BubbleSort {
     public static void main(String[] args) {
         int[] arr = {99, 100, 67, 78, 89, 90, 76};
-        bubbleSortWithoutRecursion(arr);
+        bubbleSortWithRecursion(arr, 0, 0);
         for (int num : arr) {
             System.out.println(num);
         }
@@ -19,22 +19,19 @@ public class BubbleSort {
         }
     }
 
-    public static void bubbleSortWithRecursion(int[] arr, int i, int j){
-        if(i == arr.length){
+    public static void bubbleSortWithRecursion(int[] arr, int i, int j) {
+        if (i == arr.length - 1) {
             return;
         }
-        if(j == arr.length){
+        if (j == arr.length - 1 - i) {
+            bubbleSortWithRecursion(arr, i + 1, 0);
             return;
         }
-        if(i > j){
-            if(arr[i] > arr[j]){
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
-            }
-        bubbleSortWithRecursion(arr, i, j+1);
+        if (arr[j] > arr[j + 1]) {
+            int temp = arr[j];
+            arr[j] = arr[j + 1];
+            arr[j + 1] = temp;
         }
-        bubbleSortWithRecursion(arr, i-1, 0);
-
+        bubbleSortWithRecursion(arr, i, j + 1);
     }
 }
