@@ -19,7 +19,7 @@ public class SelectionSort {
         for (int i = 0; i < length; i++) {
             //set the minimum index to the first index
             int minIndex = i;
-            //do the comparison
+            //find the min element index
             for(int j = i + 1; j < length; j++){
                 if(arr[j] < arr[minIndex]){
                     //set the min mindex to j
