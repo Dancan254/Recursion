@@ -9,7 +9,7 @@ public class SelectionSort {
         int[] arr2 = {4, 2, 5, 3, 8};
         System.out.println("with recursion");
         selectionSortWithRecursion(arr, 0);
-        for(int el : arr){
+        for(int el : arr2){
             System.out.println(el);
         }
     }
