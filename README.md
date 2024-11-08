@@ -40,7 +40,8 @@ public int factorial(int n) {
     if (n == 1) { // Base case
         return 1;
     }
-    return n * factorial(n - 1); // Recursive case
+    // Recursive case
+    return n * factorial(n - 1);
 }
 ```
 
@@ -124,7 +125,8 @@ public int factorialTail(int n, int accumulator) {
     if (n == 1) {
         return accumulator;
     }
-    return factorialTail(n - 1, n * accumulator); // Tail recursive call
+    // Tail recursive call
+    return factorialTail(n - 1, n * accumulator);
 }
 ```
 
